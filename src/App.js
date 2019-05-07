@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Todos from './Todos';
-import AddTodo form './AddTodo';
+import AddTodo from './AddTodo';
 
 class App extends Component {
   state = {
@@ -22,10 +22,10 @@ class App extends Component {
   addTodo = (todo) => {
     todo.id = Math.random();
     let todos = [...this.state.todos, todo];
-    this.setState(
+    this.setState({
       todos: todos
       //todos <- since the names are the same you can use the short hand version
-    )
+    })
   }
 
   render() {

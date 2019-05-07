@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 class AddTodo extends Component {
   state = {
-    content: ""
+    content: ''
   }
 
   handleChange = (e) => {
@@ -14,9 +14,9 @@ class AddTodo extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.addTodo(this.state);
-    this.setState(
+    this.setState({
       content: ''
-    )
+    })
   }
 
   render() {
@@ -24,7 +24,7 @@ class AddTodo extends Component {
       <div>
         <form onSubmit={this.handleSubmit}>
           <label>Add a new task!</label>
-          <input type="text" onChange={this.handleChange} value={this.state.content}/> //the value property here clears the input field after submission
+          <input type="text" onChange={this.handleChange} value={this.state.content}/> {/*the value property here clears the input field after submission*/}
         </form>
       </div>
     )
